@@ -1,0 +1,10 @@
+[Interface]
+PrivateKey = {{ .PrivateKeyClient }}
+Address = {{ .Address }}
+DNS = 8.8.8.8
+
+[Peer]
+PublicKey = {{ .PublicKeyServer }}
+Endpoint = {{ printf "%s:%s" .ServerHost .ServerPort }}
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 20
